@@ -4,6 +4,7 @@ const  ctx = canvas.getContext('2d');
 
 const width = canvas.width = window.innerWidth;
 const height = canvas.height = window.innerHeight;
+let btn = document.querySelector('button');
 
 let check;
 
@@ -63,10 +64,16 @@ kochline.prototype.update = function(next)
 
 }
 
-evnt =  document.addEventListener('keydown',function(event){
-    if (event.keyCode === 32)
-        check = true;
-});
+// evnt =  document.addEventListener('keydown',function(event){
+//     if (event.keyCode === 32)
+//         check = true;
+// });
+
+btn.onclick = function()
+{
+    check = true;
+}
+
 
 let k = new kochline([width/4,height/2],[3*width/4,height/2]);
 let arr = [];
