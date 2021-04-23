@@ -59,15 +59,8 @@ kochline.prototype.update = function(next)
     next.push(new kochline(c,d));
     next.push(new kochline(d,e));  
 
-    console.log(b);
-    console.log(c);
 
 }
-
-// evnt =  document.addEventListener('keydown',function(event){
-//     if (event.keyCode === 32)
-//         check = true;
-// });
 
 btn.onclick = function()
 {
@@ -100,11 +93,18 @@ function loop()
         {
             // alert('update');
 
-            if (arr[i].len > 0.05)
+            if (arr[i].len >1)
                 { 
                     arr[i].update(next);
 
                 }
+
+            else{
+                 k = new kochline([width/4,height/2],[3*width/4,height/2]);
+                 next= [];
+                 next.push(k);
+
+            }
                
         }
 
